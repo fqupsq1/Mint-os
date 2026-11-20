@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Богатырская тема в музыке</title>
+<link href="https://fonts.googleapis.com/css2?family=Ruslan+Display&family=Alegreya:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#1c2b33; --bg2:#243842; --paper:#eadfc6; --gold:#d0a04a; --red:#a63a2f; --mute:#9fb0b4;
+  --h:'Ruslan Display',Georgia,'Times New Roman',serif;
+  --b:'Alegreya',Georgia,'Times New Roman',serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%;background:#121c21;color:var(--paper);font-family:var(--b);overflow:hidden}
+.deck{position:relative;width:100%;height:100%}
+.slide{position:absolute;inset:0;display:none;padding:6vh 7vw 9vh;background:var(--bg);overflow:hidden}
+.slide.on{display:flex;flex-direction:column;justify-content:center}
+.slide::before{content:"";position:absolute;left:0;right:0;top:0;height:1.2vh;background:repeating-linear-gradient(90deg,var(--red) 0 2.4vh,var(--gold) 2.4vh 3.6vh)}
+h1,h2{font-family:var(--h);font-weight:400;color:var(--gold);line-height:1.08}
+h1{font-size:clamp(2.6rem,7.5vw,6.4rem);max-width:12ch}
+h2{font-size:clamp(1.9rem,4.2vw,3.4rem);margin-bottom:3vh}
+p,li{font-size:clamp(1.05rem,1.9vw,1.6rem);line-height:1.5}
+.lead{font-size:clamp(1.2rem,2.3vw,1.9rem);max-width:34ch;color:var(--paper)}
+.sub{color:var(--mute);font-style:italic;margin-top:3vh;font-size:clamp(1rem,1.8vw,1.5rem)}
+ul{list-style:none;max-width:62ch}
+li{padding-left:1.6em;position:relative;margin-bottom:1.6vh}
+li::before{content:"";position:absolute;left:0;top:.62em;width:.7em;height:.7em;background:var(--red);transform:rotate(45deg)}
+b{color:var(--gold);font-weight:700}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:5vw;align-items:start}
+.card{background:var(--bg2);border-left:.6vh solid var(--gold);padding:2.4vh 2vw}
+.card h3{font-family:var(--h);font-weight:400;color:var(--gold);font-size:clamp(1.3rem,2.4vw,2rem);margin-bottom:1vh}
+.card p{font-size:clamp(1rem,1.6vw,1.35rem)}
+.year{font-family:var(--h);color:var(--red);font-size:clamp(1.1rem,2vw,1.7rem)}
+.arch{position:absolute;right:6vw;bottom:0;width:28vw;max-width:360px;aspect-ratio:3/4;background:var(--bg2);
+  clip-path:polygon(0 100%,0 38%,12% 22%,50% 0,88% 22%,100% 38%,100% 100%);opacity:.9}
+.arch::after{content:"";position:absolute;left:18%;right:18%;bottom:0;top:42%;background:var(--bg);
+  clip-path:polygon(0 100%,0 30%,50% 0,100% 30%,100% 100%)}
+.title .lead{margin-top:3vh}
+.pic{display:block}
+.pic.hero{position:absolute;right:7vw;top:50%;transform:translateY(-52%);height:68vh;max-height:560px;width:auto}
+.pic.gate{width:100%;max-width:340px;height:auto;justify-self:center}
+@media (max-width:700px){.pic.hero{display:none}}
+.nav{position:fixed;left:0;right:0;bottom:0;height:7vh;display:flex;align-items:center;justify-content:space-between;padding:0 7vw;z-index:5}
+.bar{flex:1;height:.5vh;background:#33464f;margin:0 2vw}
+.bar i{display:block;height:100%;width:0;background:var(--gold);transition:width .3s}
+button{background:none;border:1px solid var(--mute);color:var(--paper);font:inherit;font-size:1.1rem;padding:.4em 1em;cursor:pointer;border-radius:2px}
+button:hover{border-color:var(--gold);color:var(--gold)}
+button:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+.cnt{color:var(--mute);min-width:4.5em;text-align:right}
+@media (max-width:700px){.cols{grid-template-columns:1fr}.arch{display:none}.slide{padding:5vh 6vw 10vh;justify-content:flex-start}.slide.on{overflow-y:auto}}
+</style>
+</head>
+<body>
+<div class="deck" id="deck">
+
+<section class="slide title">
+  <h1>Богатырская тема в музыке</h1>
+  <p class="lead">Как русские композиторы превратили былинную силу в звук оркестра</p>
+  <p class="sub">От Глинки до Прокофьева</p>
+  <svg class="pic hero" viewBox="0 0 300 360" role="img" aria-label="Богатырский шлем и щит" xmlns="http://www.w3.org/2000/svg">
+    <g transform="rotate(40 150 250)">
+      <path d="M150 90 L158 130 V330 H142 V130 Z" fill="#9fb0b4" stroke="#eadfc6" stroke-width="2"/>
+      <rect x="118" y="330" width="64" height="10" rx="3" fill="#d0a04a"/>
+      <rect x="145" y="340" width="10" height="26" fill="#a63a2f"/>
+    </g>
+    <circle cx="150" cy="250" r="105" fill="#a63a2f" stroke="#d0a04a" stroke-width="8"/>
+    <circle cx="150" cy="250" r="82" fill="none" stroke="#d0a04a" stroke-width="3" stroke-dasharray="2 9" stroke-linecap="round"/>
+    <circle cx="150" cy="250" r="22" fill="#d0a04a"/>
+    <circle cx="150" cy="250" r="9" fill="#1c2b33"/>
+    <path d="M150 0 L156 18 L144 18 Z" fill="#d0a04a"/>
+    <path d="M88 126 Q88 46 150 16 Q212 46 212 126 Z" fill="#9fb0b4" stroke="#eadfc6" stroke-width="3"/>
+    <path d="M150 20 V126" stroke="#eadfc6" stroke-width="3" opacity=".6"/>
+    <rect x="82" y="118" width="136" height="16" rx="3" fill="#d0a04a"/>
+    <rect x="143" y="134" width="14" height="42" fill="#9fb0b4" stroke="#eadfc6" stroke-width="2"/>
+  </svg>
+</section>
+
+<section class="slide">
+  <h2>Что такое богатырская тема</h2>
+  <ul>
+    <li>Образ <b>защитника земли русской</b>: силач, воин, хранитель родины.</li>
+    <li>Источник — <b>былины</b>: героический эпос о Илье Муромце, Добрыне Никитиче, Алёше Поповиче.</li>
+    <li>В музыке это не сюжет, а <b>характер звучания</b>: мощь, широта, неторопливое величие.</li>
+    <li>Тема объединяет оперу, симфонию, программную музыку и кино.</li>
+  </ul>
+</section>
+
+<section class="slide">
+  <h2>Истоки: былина как музыка</h2>
+  <div class="cols">
+    <ul>
+      <li>Былины <b>пели</b> сказители — речитативом под ровный, размеренный напев.</li>
+      <li>Мелодия строилась на узком диапазоне и повторяла один оборот: важно слово, а не украшение.</li>
+    </ul>
+    <div class="card">
+      <h3>Что взяли композиторы</h3>
+      <p>Распевность, суровую простоту, чёткий ритм, лады народной музыки и ощущение «эпического времени», где события не спешат.</p>
+    </div>
+  </div>
+</section>
+
+<section class="slide">
+  <p class="year">1842</p>
+  <h2>Глинка. «Руслан и Людмила»</h2>
+  <ul>
+    <li>Первая русская <b>опера-сказка с героическим центром</b>: богатырь Руслан, злой волшебник Черномор.</li>
+    <li>Знаменитая увертюра — стремительный, ликующий образ победы.</li>
+    <li>Ария Руслана «О поле, поле» и сцена с Головой — эпический размах, пространство и тишина.</li>
+    <li>Глинка заложил основу, на которую опирались «Могучая кучка» и все последователи.</li>
+  </ul>
+</section>
+
+<section class="slide">
+  <p class="year">1876</p>
+  <h2>Бородин. Симфония № 2 «Богатырская»</h2>
+  <div class="cols">
+    <ul>
+      <li>Название дал критик <b>Владимир Стасов</b>, услышав мощь и широту первой части.</li>
+      <li>Главная тема звучит унисоном — как единый голос дружины.</li>
+    </ul>
+    <div class="card">
+      <h3>Рядом: «Князь Игорь»</h3>
+      <p>В опере те же качества: героизм, достоинство, русская широта. «Половецкие пляски» — яркий контраст воинской стихии.</p>
+    </div>
+  </div>
+</section>
+
+<section class="slide">
+  <p class="year">1874</p>
+  <h2>Мусоргский. «Богатырские ворота»</h2>
+  <div class="cols" style="align-items:center">
+  <ul>
+    <li>Финал цикла <b>«Картинки с выставки»</b>, вдохновлённый архитектурным эскизом Виктора Гартмана для ворот Киева.</li>
+    <li>Торжественная тема в духе колокольного звона и церковного пения, величавая поступь.</li>
+    <li>Оркестровка Мориса Равеля (1922) сделала финал одним из самых узнаваемых симфонических образов России.</li>
+  </ul>
+  <svg class="pic gate" viewBox="0 0 320 380" role="img" aria-label="Схематичное изображение городских ворот с кокошником и колоколом" xmlns="http://www.w3.org/2000/svg">
+    <path d="M160 0 Q176 20 160 38 Q144 20 160 0 Z" fill="#d0a04a"/>
+    <path d="M160 38 V52" stroke="#d0a04a" stroke-width="4"/>
+    <path d="M40 170 Q40 112 100 100 Q132 78 160 52 Q188 78 220 100 Q280 112 280 170 Z" fill="#a63a2f" stroke="#d0a04a" stroke-width="4"/>
+    <circle cx="160" cy="118" r="16" fill="none" stroke="#d0a04a" stroke-width="3"/>
+    <rect x="40" y="170" width="240" height="210" fill="#243842" stroke="#d0a04a" stroke-width="4"/>
+    <path d="M100 380 V250 Q160 190 220 250 V380 Z" fill="#1c2b33" stroke="#d0a04a" stroke-width="3"/>
+    <path d="M146 262 Q146 236 160 232 Q174 236 174 262 Z" fill="#d0a04a"/>
+    <circle cx="160" cy="268" r="5" fill="#d0a04a"/>
+    <path d="M60 200 H90 M230 200 H260 M60 224 H90 M230 224 H260" stroke="#d0a04a" stroke-width="3" stroke-dasharray="6 6" opacity=".7"/>
+  </svg>
+  </div>
+</section>
+
+<section class="slide">
+  <p class="year">1867 — 1898</p>
+  <h2>Римский-Корсаков. Былинный мир</h2>
+  <div class="cols">
+    <div class="card">
+      <h3>«Садко»</h3>
+      <p>Симфоническая картина (1867) и опера-былина (1898): гусляр, Новгород, морское царство. Ширь и сказочность вместо битвы.</p>
+    </div>
+    <div class="card">
+      <h3>«Сказание о невидимом граде Китеже»</h3>
+      <p>Опера 1907 года: героизм духа — защита родной земли и веры. Здесь богатырство переходит в нравственную силу.</p>
+    </div>
+  </div>
+</section>
+
+<section class="slide">
+  <p class="year">XX век</p>
+  <h2>Глиэр и Прокофьев</h2>
+  <div class="cols">
+    <div class="card">
+      <h3>Глиэр. Симфония № 3 «Илья Муромец»</h3>
+      <p>1911 год. Четыре части рассказывают о путешествии богатыря: встреча с Соловьём-разбойником, пир у князя Владимира, подвиг и окаменение.</p>
+    </div>
+    <div class="card">
+      <h3>Прокофьев. «Александр Невский»</h3>
+      <p>Кантата 1939 года по музыке к фильму Эйзенштейна. «Ледовое побоище» и хор «Вставайте, люди русские» — героика нового времени.</p>
+    </div>
+  </div>
+</section>
+
+<section class="slide">
+  <h2>Как звучит богатырь</h2>
+  <ul>
+    <li><b>Низкий регистр</b> и медные духовые: тромбоны, тубы, валторны.</li>
+    <li><b>Унисон</b> всего оркестра — голос дружины.</li>
+    <li><b>Маршевый, размеренный ритм</b>, тяжёлая поступь.</li>
+    <li><b>Народные лады</b> и протяжные, распевные мелодии.</li>
+    <li><b>Колокольность</b>: звоны, повторяющиеся аккорды, торжественные кульминации.</li>
+  </ul>
+</section>
+
+<section class="slide">
+  <h2>Выводы и что послушать</h2>
+  <div class="cols">
+    <ul>
+      <li>Богатырская тема — <b>национальный образ силы</b>, найденный русской классикой.</li>
+      <li>Она живёт и в кино, и в современной музыке.</li>
+      <li>Главное — не пересказ былины, а её дух.</li>
+    </ul>
+    <div class="card">
+      <h3>Плейлист</h3>
+      <p>Глинка — увертюра к «Руслану и Людмиле».<br>Бородин — Симфония № 2.<br>Мусоргский — «Богатырские ворота».<br>Римский-Корсаков — «Садко».<br>Глиэр — «Илья Муромец».<br>Прокофьев — «Александр Невский».</p>
+    </div>
+  </div>
+</section>
+
+</div>
+
+<div class="nav">
+  <button id="prev" aria-label="Назад">Назад</button>
+  <div class="bar"><i id="fill"></i></div>
+  <span class="cnt" id="cnt"></span>
+  <button id="next" aria-label="Вперёд" style="margin-left:2vw">Вперёд</button>
+</div>
+
+<script>
+(function(){
+  var s=[].slice.call(document.querySelectorAll('.slide')),i=0;
+  function show(n){
+    i=Math.max(0,Math.min(s.length-1,n));
+    s.forEach(function(el,k){el.classList.toggle('on',k===i)});
+    document.getElementById('fill').style.width=((i+1)/s.length*100)+'%';
+    document.getElementById('cnt').textContent=(i+1)+' / '+s.length;
+    try{history.replaceState(null,'','#'+(i+1))}catch(e){}
+  }
+  document.getElementById('prev').onclick=function(){show(i-1)};
+  document.getElementById('next').onclick=function(){show(i+1)};
+  document.addEventListener('keydown',function(e){
+    if(['ArrowRight','PageDown',' ','Enter'].indexOf(e.key)>-1){e.preventDefault();show(i+1)}
+    if(['ArrowLeft','PageUp','Backspace'].indexOf(e.key)>-1){e.preventDefault();show(i-1)}
+    if(e.key==='Home')show(0);
+    if(e.key==='End')show(s.length-1);
+  });
+  var x0=null;
+  document.addEventListener('touchstart',function(e){x0=e.touches[0].clientX},{passive:true});
+  document.addEventListener('touchend',function(e){
+    if(x0===null)return;var d=e.changedTouches[0].clientX-x0;
+    if(Math.abs(d)>50)show(d<0?i+1:i-1);x0=null;
+  });
+  var h=parseInt(location.hash.slice(1),10);
+  show(h?h-1:0);
+})();
+</script>
+</body>
+</html>
