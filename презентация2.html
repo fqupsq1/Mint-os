@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Богатырская тема в музыке</title>
+<link href="https://fonts.googleapis.com/css2?family=Ruslan+Display&family=Alegreya:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#1c2b33; --bg2:#243842; --paper:#eadfc6; --gold:#d0a04a; --red:#a63a2f; --mute:#9fb0b4;
+  --h:'Ruslan Display',Georgia,'Times New Roman',serif;
+  --b:'Alegreya',Georgia,'Times New Roman',serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%;background:#121c21;color:var(--paper);font-family:var(--b);overflow:hidden}
+.deck{position:relative;width:100%;height:100%}
+.slide{position:absolute;inset:0;display:none;padding:6vh 7vw 9vh;background:var(--bg);overflow:hidden}
+.slide.on{display:flex;flex-direction:column;justify-content:safe center;overflow-y:auto}
+.slide::before{content:"";position:absolute;left:0;right:0;top:0;height:1.2vh;background:repeating-linear-gradient(90deg,var(--red) 0 2.4vh,var(--gold) 2.4vh 3.6vh)}
+h1,h2{font-family:var(--h);font-weight:400;color:var(--gold);line-height:1.08}
+h1{font-size:clamp(2.6rem,7.5vw,6.4rem);max-width:12ch}
+h2{font-size:clamp(1.7rem,3.6vw,3rem);margin-bottom:2.4vh}
+p,li{font-size:clamp(.98rem,1.5vw,1.3rem);line-height:1.5}
+section p+p{margin-top:1.4vh}
+.lead{font-size:clamp(1.2rem,2.3vw,1.9rem);max-width:34ch;color:var(--paper)}
+.sub{color:var(--mute);font-style:italic;margin-top:3vh;font-size:clamp(1rem,1.8vw,1.5rem)}
+ul{list-style:none;max-width:70ch}
+li{padding-left:1.6em;position:relative;margin-bottom:1.2vh}
+li::before{content:"";position:absolute;left:0;top:.62em;width:.7em;height:.7em;background:var(--red);transform:rotate(45deg)}
+b{color:var(--gold);font-weight:700}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:5vw;align-items:start}
+.card{background:var(--bg2);border-left:.6vh solid var(--gold);padding:2.4vh 2vw}
+.card h3{font-family:var(--h);font-weight:400;color:var(--gold);font-size:clamp(1.3rem,2.4vw,2rem);margin-bottom:1vh}
+.card p{font-size:clamp(.95rem,1.4vw,1.2rem)}
+.card p+p{margin-top:1vh}
+.year{font-family:var(--h);color:var(--red);font-size:clamp(1.1rem,2vw,1.7rem)}
+.arch{position:absolute;right:6vw;bottom:0;width:28vw;max-width:360px;aspect-ratio:3/4;background:var(--bg2);
+  clip-path:polygon(0 100%,0 38%,12% 22%,50% 0,88% 22%,100% 38%,100% 100%);opacity:.9}
+.arch::after{content:"";position:absolute;left:18%;right:18%;bottom:0;top:42%;background:var(--bg);
+  clip-path:polygon(0 100%,0 30%,50% 0,100% 30%,100% 100%)}
+.title .lead{margin-top:3vh}
+.pic{display:block}
+.pic.hero{position:absolute;right:7vw;top:50%;transform:translateY(-52%);height:68vh;max-height:560px;width:auto}
+.pic.gate{width:100%;max-width:340px;height:auto;justify-self:center}
+@media (max-width:700px){.pic.hero{display:none}}
+.nav{position:fixed;left:0;right:0;bottom:0;height:7vh;display:flex;align-items:center;justify-content:space-between;padding:0 7vw;z-index:5}
+.bar{flex:1;height:.5vh;background:#33464f;margin:0 2vw}
+.bar i{display:block;height:100%;width:0;background:var(--gold);transition:width .3s}
+button{background:none;border:1px solid var(--mute);color:var(--paper);font:inherit;font-size:1.1rem;padding:.4em 1em;cursor:pointer;border-radius:2px}
+button:hover{border-color:var(--gold);color:var(--gold)}
+button:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+.cnt{color:var(--mute);min-width:4.5em;text-align:right}
+@media (max-width:700px){.cols{grid-template-columns:1fr}.arch{display:none}.slide{padding:5vh 6vw 10vh;justify-content:flex-start}.slide.on{overflow-y:auto}}
+</style>
+</head>
+<body>
+<div class="deck" id="deck">
+
+<section class="slide title">
+  <h1>Богатырская тема в музыке</h1>
+  <p class="lead">Как русские композиторы превратили былинную силу в звук оркестра</p>
+  <p class="sub">От Глинки до Прокофьева</p>
+  <svg class="pic hero" viewBox="0 0 300 360" role="img" aria-label="Богатырский шлем и щит" xmlns="http://www.w3.org/2000/svg">
+    <g transform="rotate(40 150 250)">
+      <path d="M150 90 L158 130 V330 H142 V130 Z" fill="#9fb0b4" stroke="#eadfc6" stroke-width="2"/>
+      <rect x="118" y="330" width="64" height="10" rx="3" fill="#d0a04a"/>
+      <rect x="145" y="340" width="10" height="26" fill="#a63a2f"/>
+    </g>
+    <circle cx="150" cy="250" r="105" fill="#a63a2f" stroke="#d0a04a" stroke-width="8"/>
+    <circle cx="150" cy="250" r="82" fill="none" stroke="#d0a04a" stroke-width="3" stroke-dasharray="2 9" stroke-linecap="round"/>
+    <circle cx="150" cy="250" r="22" fill="#d0a04a"/>
+    <circle cx="150" cy="250" r="9" fill="#1c2b33"/>
+    <path d="M150 0 L156 18 L144 18 Z" fill="#d0a04a"/>
+    <path d="M88 126 Q88 46 150 16 Q212 46 212 126 Z" fill="#9fb0b4" stroke="#eadfc6" stroke-width="3"/>
+    <path d="M150 20 V126" stroke="#eadfc6" stroke-width="3" opacity=".6"/>
+    <rect x="82" y="118" width="136" height="16" rx="3" fill="#d0a04a"/>
+    <rect x="143" y="134" width="14" height="42" fill="#9fb0b4" stroke="#eadfc6" stroke-width="2"/>
+  </svg>
+</section>
+
+<section class="slide">
+  <h2>Что такое богатырская тема</h2>
+  <p>Богатырская тема — это музыкальный образ героя-защитника: человека огромной силы, который стоит на страже родной земли. Её корни в русских <b>былинах</b>, героическом эпосе о Илье Муромце, Добрыне Никитиче и Алёше Поповиче. Эти трое, согласно былинам, служили при дворе киевского князя Владимира и защищали Русь от врагов и чудовищ.</p>
+  <p>Для композиторов богатырь был не столько персонажем, сколько <b>состоянием звучания</b>: мощь без суеты, широта, неторопливое величие, уверенность в своей правоте. Поэтому «богатырскими» называют не только оперы на былинные сюжеты, но и симфонические страницы, где нет ни одного героя, а есть лишь характер музыки.</p>
+  <ul>
+    <li>Тема прошла через оперу, симфонию, программную музыку, кантату и кино.</li>
+    <li>Она стала одним из главных способов выразить национальный характер в русской классике XIX века.</li>
+  </ul>
+</section>
+
+<section class="slide">
+  <h2>Истоки: былина как музыка</h2>
+  <div class="cols">
+    <div>
+      <p>Былины не читали, а <b>пели</b>. Сказители исполняли их речитативом под ровный, размеренный напев, нередко под гусли. Мелодия строилась на узком диапазоне и повторяла один и тот же оборот: главным было слово, а не украшение. Известные записи былин собраны в сборнике Кирши Данилова (XVIII век), а в XIX веке Русский Север прославили сказители вроде Трофима Рябинина.</p>
+      <p>Композиторы слушали этот эпос как живую традицию. Из неё выросли привычные для «богатырского» звучания приёмы: простая, суровая мелодия, чёткий ритм и ощущение «эпического времени», где события разворачиваются не спеша.</p>
+    </div>
+    <div class="card">
+      <h3>Что взяли композиторы</h3>
+      <p>Распевность и широту мелодии.</p>
+      <p>Простоту фактуры: мало украшений, много силы.</p>
+      <p>Лады народной музыки, в том числе пентатонику.</p>
+      <p>Приём повтора: мотив возвращается, как строка в былине.</p>
+    </div>
+  </div>
+</section>
+
+<section class="slide">
+  <p class="year">1842</p>
+  <h2>Глинка. «Руслан и Людмила»</h2>
+  <p>Опера по поэме Пушкина стала первой русской оперой, где богатырь — главный герой. <b>Руслан</b> отправляется спасать похищенную невесту, побеждает великанов-врагов, сражается с волшебником Черномором. Премьера состоялась в Петербурге в 1842 году.</p>
+  <ul>
+    <li><b>Увертюра</b> — стремительная, ликующая, одна из самых известных в русском репертуаре. Её энергия сразу задаёт образ победы.</li>
+    <li><b>Ария Руслана «О поле, поле»</b> — картина поля битвы, усеянного костями. Широкая мелодия и тишина оркестра создают ощущение огромного пространства.</li>
+    <li><b>Сцена с Головой</b> — эпическая, с басами и сумрачным колоритом.</li>
+    <li>Для зла Глинка применил необычную <b>целотонную гамму</b>: зловещую, «неживую», противопоставленную простым и ясным мелодиям героев.</li>
+  </ul>
+  <p>Эту оперу считают отправной точкой для «Могучей кучки»: композиторы следующего поколения опирались на найденные Глинкой образы.</p>
+</section>
+
+<section class="slide">
+  <p class="year">1876</p>
+  <h2>Бородин. Симфония № 2 «Богатырская»</h2>
+  <div class="cols">
+    <div>
+      <p>Симфония си минор писалась несколько лет (с конца 1860-х) и была закончена в 1876 году. Название «Богатырская» закрепил за ней критик <b>Владимир Стасов</b>, услышавший в музыке образ собрания русских богатырей.</p>
+      <ul>
+        <li><b>Первая часть</b>: главная тема звучит унисоном всего оркестра, как голос дружины. Она широка, тяжеловесна и немного суровая, а побочная тема лирически смягчает героику.</li>
+        <li><b>Скерцо</b> — стремительный, дерзкий бег.</li>
+        <li><b>Медленная часть</b> напоминает песню древнего певца-гусляра.</li>
+        <li><b>Финал</b> — праздник, пир и всеобщее ликование.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Рядом: «Князь Игорь»</h3>
+      <p>Опера, над которой Бородин работал почти двадцать лет, осталась незавершённой: её закончили Римский-Корсаков и Глазунов. В ней та же русская широта и гордость, а «Половецкие пляски» дают яркий контраст воинской стихии.</p>
+    </div>
+  </div>
+</section>
+
+<section class="slide">
+  <p class="year">1874</p>
+  <h2>Мусоргский. «Богатырские ворота»</h2>
+  <div class="cols" style="align-items:center">
+  <div>
+    <p>Финал фортепианного цикла <b>«Картинки с выставки»</b> написан в память о художнике и архитекторе Викторе Гартмане. По его эскизу ворота в Киеве должны были украсить город — в русском стиле, с колокольней и куполом в форме древнего шлема. Проект так и не был построен.</p>
+    <ul>
+      <li>Тема звучит торжественно, как церковное пение, а между фразами вступают колокола — гулкие аккорды, повторяющиеся, как удары.</li>
+      <li>Поступь величавая, шаг размеренный: так в музыке выглядит триумфальное шествие.</li>
+      <li>Оркестровку <b>Мориса Равеля</b> (1922) сделала финал одним из самых узнаваемых симфонических образов России.</li>
+    </ul>
+  </div>
+  <svg class="pic gate" viewBox="0 0 320 380" role="img" aria-label="Схематичное изображение городских ворот с кокошником и колоколом" xmlns="http://www.w3.org/2000/svg">
+    <path d="M160 0 Q176 20 160 38 Q144 20 160 0 Z" fill="#d0a04a"/>
+    <path d="M160 38 V52" stroke="#d0a04a" stroke-width="4"/>
+    <path d="M40 170 Q40 112 100 100 Q132 78 160 52 Q188 78 220 100 Q280 112 280 170 Z" fill="#a63a2f" stroke="#d0a04a" stroke-width="4"/>
+    <circle cx="160" cy="118" r="16" fill="none" stroke="#d0a04a" stroke-width="3"/>
+    <rect x="40" y="170" width="240" height="210" fill="#243842" stroke="#d0a04a" stroke-width="4"/>
+    <path d="M100 380 V250 Q160 190 220 250 V380 Z" fill="#1c2b33" stroke="#d0a04a" stroke-width="3"/>
+    <path d="M146 262 Q146 236 160 232 Q174 236 174 262 Z" fill="#d0a04a"/>
+    <circle cx="160" cy="268" r="5" fill="#d0a04a"/>
+    <path d="M60 200 H90 M230 200 H260 M60 224 H90 M230 224 H260" stroke="#d0a04a" stroke-width="3" stroke-dasharray="6 6" opacity=".7"/>
+  </svg>
+  </div>
+</section>
+
+<section class="slide">
+  <p class="year">1867 — 1907</p>
+  <h2>Римский-Корсаков. Былинный мир</h2>
+  <p>Римский-Корсаков чаще изображал богатырство не боем, а <b>красотой и широтой мира</b>: сказочного, по-эпически просторного.</p>
+  <div class="cols">
+    <div class="card">
+      <h3>«Садко»</h3>
+      <p>Музыкальная картина (1867) и опера-былина (1898) о новгородском гусляре, который спускается в подводное царство. Песни заморских гостей, колыбельная Волховы и морская стихия создают огромную звуковую панораму.</p>
+    </div>
+    <div class="card">
+      <h3>«Сказание о невидимом граде Китеже»</h3>
+      <p>Опера 1907 года о легендарном городе, ушедшем под воду, чтобы не достаться врагам. Богатырство здесь — это стойкость духа и верность родной земле.</p>
+    </div>
+  </div>
+</section>
+
+<section class="slide">
+  <p class="year">XX век</p>
+  <h2>Глиэр и Прокофьев</h2>
+  <div class="cols">
+    <div class="card">
+      <h3>Глиэр. Симфония № 3 «Илья Муромец»</h3>
+      <p>Масштабное сочинение 1909–1911 годов, которое рассказывает историю богатыря в четырёх частях: встреча со Святогором, битва с Соловьём-разбойником, пир при дворе князя Владимира и последний подвиг, после которого Илья превращается в камень.</p>
+      <p>Оркестр огромный, а звучание картинное, почти кинематографическое.</p>
+    </div>
+    <div class="card">
+      <h3>Прокофьев. «Александр Невский»</h3>
+      <p>Музыка к фильму Сергея Эйзенштейна (1938) была переработана в кантату (1939). Центральный эпизод — «Ледовое побоище», где композитор изобразил битву 1242 года на Чудском озере. Завершающий хор «Вставайте, люди русские» стал символом героической песни.</p>
+    </div>
+  </div>
+</section>
+
+<section class="slide">
+  <h2>Как звучит богатырь</h2>
+  <p>Если описать «богатырскую» музыку на языке композиторов, у неё всегда несколько общих черт.</p>
+  <ul>
+    <li><b>Регистр и тембр.</b> Низкие голоса: виолончели, контрабасы, тромбоны, туба. Медь звучит торжественно, как фанфары на городских воротах.</li>
+    <li><b>Унисон.</b> Весь оркестр играет одну мелодию — образ единой силы, дружины, народа.</li>
+    <li><b>Ритм.</b> Размеренный, маршевый или «шагающий», без суеты. Богатырь не торопится.</li>
+    <li><b>Лад и мелодия.</b> Народные ладовые обороты, пентатоника, широкое дыхание фразы.</li>
+    <li><b>Колокольность.</b> Повторяющиеся аккорды, звоны и торжественные кульминации, как в «Богатырских воротах».</li>
+    <li><b>Контраст.</b> Рядом с героем всегда лирическая тема: любовь, дом, природа. Именно она делает силу человечной.</li>
+  </ul>
+</section>
+
+<section class="slide">
+  <h2>Выводы и что послушать</h2>
+  <div class="cols">
+    <div>
+      <p>Богатырская тема — это <b>национальный образ силы</b>, найденный русской классикой. Композиторы не пересказывали былины, а переводили их дух на язык оркестра: простота, мощь, широта и достоинство.</p>
+      <p>Эта традиция не закончилась в XIX веке. Её продолжили Глиэр и Прокофьев, она слышна в музыке к фильмам и в современной симфонической музыке, а богатырский образ до сих пор узнаётся с первых тактов.</p>
+      <p>Чтобы понять тему, лучше слушать: услышав один раз унисонную тему Бородина или колокола Мусоргского, её ни с чем не спутаешь.</p>
+    </div>
+    <div class="card">
+      <h3>Плейлист</h3>
+      <p>Глинка — увертюра к «Руслану и Людмиле»<br>Бородин — Симфония № 2, первая часть<br>Мусоргский (орк. Равель) — «Богатырские ворота»<br>Римский-Корсаков — «Садко»<br>Глиэр — Симфония № 3 «Илья Муромец»<br>Прокофьев — «Александр Невский»</p>
+    </div>
+  </div>
+</section>
+
+</div>
+
+<div class="nav">
+  <button id="prev" aria-label="Назад">Назад</button>
+  <div class="bar"><i id="fill"></i></div>
+  <span class="cnt" id="cnt"></span>
+  <button id="next" aria-label="Вперёд" style="margin-left:2vw">Вперёд</button>
+</div>
+
+<script>
+(function(){
+  var s=[].slice.call(document.querySelectorAll('.slide')),i=0;
+  function show(n){
+    i=Math.max(0,Math.min(s.length-1,n));
+    s.forEach(function(el,k){el.classList.toggle('on',k===i)});
+    document.getElementById('fill').style.width=((i+1)/s.length*100)+'%';
+    document.getElementById('cnt').textContent=(i+1)+' / '+s.length;
+    try{history.replaceState(null,'','#'+(i+1))}catch(e){}
+  }
+  document.getElementById('prev').onclick=function(){show(i-1)};
+  document.getElementById('next').onclick=function(){show(i+1)};
+  document.addEventListener('keydown',function(e){
+    if(['ArrowRight','PageDown',' ','Enter'].indexOf(e.key)>-1){e.preventDefault();show(i+1)}
+    if(['ArrowLeft','PageUp','Backspace'].indexOf(e.key)>-1){e.preventDefault();show(i-1)}
+    if(e.key==='Home')show(0);
+    if(e.key==='End')show(s.length-1);
+  });
+  var x0=null;
+  document.addEventListener('touchstart',function(e){x0=e.touches[0].clientX},{passive:true});
+  document.addEventListener('touchend',function(e){
+    if(x0===null)return;var d=e.changedTouches[0].clientX-x0;
+    if(Math.abs(d)>50)show(d<0?i+1:i-1);x0=null;
+  });
+  var h=parseInt(location.hash.slice(1),10);
+  show(h?h-1:0);
+})();
+</script>
+</body>
+</html>
